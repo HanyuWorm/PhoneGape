@@ -1,0 +1,211 @@
+<html ng-app= "scoreBoard">
+<head>
+<meta charset='utf-8'>
+    <title>Kidteam_Scoreboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/libs/bootstrap.min.css">
+  	<script src="js/libs/jquery.min.js"></script>
+ 	<script src="js/libs/bootstrap.min.js"></script>
+ 	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	
+	<script type="text/javascript" src="js/scoreboard.js"></script>
+	 <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/libs/swiper.min.css">
+<!-- Swiper JS -->
+    <script src="lib/swiper.min.js"></script>
+	
+	<script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        // device APIs are available
+        function onDeviceReady() {
+            if(navigator.network.connection.type == Connection.NONE){
+                alert("Không có kết nối internet!");
+            }
+        }
+        
+        function onDeviceReady(){
+    	    document.addEventListener("backbutton", function(e){
+    	    	window.location='./home.html';
+    	    }, false);
+    	}
+    </script>
+</head>
+<body>
+	<div class="container"  ng-controller = "scoreBoardController">
+		<div class="left_container"></div>
+		<div class="right_container">
+			<div class="header"></div>
+			<div class="content">
+				<div class="left_content">
+					<div class="scoreboard">
+						<div id="wrapper_content" >
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+								
+									<div class = "swiper-slide" >
+									<p class="common_notify" ng-show ="notifyData">Chưa Có Dữ Liệu!</p>
+										<div class="topic_content" ng-show ="!notifyData">
+											<div class="list-group_score" style ="background: #5a5a5a;">
+												<ul class="list-group" >
+													<li class="list-group-item" ng-repeat = "scoreboard in listScoreClass">
+														<div class="stt-Score">
+															<div class="coup-score">
+															<div class="index-topscore" style ="{{scoreboard.styleCupScore}}"></div>
+															<p class="index-score" style = "{{scoreboard.styleIndexScore}}">{{scoreboard.index}}</p>
+															</div>
+														</div>
+														<div class="nameUser-Score">
+															<div class="name-scoreboard">{{scoreboard.Name}}</div>
+															<div class="level-scoreboard">{{scoreboard.levelScoreboard}}</div>
+														</div>
+														<div class="diem-Score">
+															<div class="score-scoreboard">{{scoreboard.Score}}</div>
+															<div class="level-score">Điểm</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									<div class = "swiper-slide" >
+									<p class="common_notify" ng-show ="notifyData2">Chưa Có Dữ Liệu!</p>
+										<div class="topic_content" ng-show ="!notifyData2">
+											<div class="list-group_score">
+												<ul class="list-group" >
+													<li class="list-group-item" ng-repeat = "scoreboard in listScoreClass2">
+														<div class="stt-Score">
+															<div class="coup-score">
+															<div class="index-topscore" style ="{{scoreboard.styleCupScore}}"></div>
+															<p class="index-score" style = "{{scoreboard.styleIndexScore}}">{{scoreboard.index}}</p>
+															</div>
+														</div>
+														<div class="nameUser-Score">
+															<div class="name-scoreboard">{{scoreboard.Name}}</div>
+															<div class="level-scoreboard">{{scoreboard.levelScoreboard}}</div>
+														</div>
+														<div class="diem-Score">
+															<div class="score-scoreboard">{{scoreboard.Score}}</div>
+															<div class="level-score">Điểm</div>
+														</div>
+													</li>
+
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									<div class = "swiper-slide" >
+									<p class="common_notify" ng-show ="notifyData3">Chưa Có Dữ Liệu!</p>
+										<div class="topic_content" ng-show ="!notifyData3">
+											<div class="list-group_score">
+												<ul class="list-group" >
+													<li class="list-group-item" ng-repeat = "scoreboard in listScoreClass3">
+														<div class="stt-Score">
+															<div class="coup-score">
+															<div class="index-topscore" style ="{{scoreboard.styleCupScore}}"></div>
+															<p class="index-score" style = "{{scoreboard.styleIndexScore}}">{{scoreboard.index}}</p>
+															</div>
+														</div>
+														<div class="nameUser-Score">
+															<div class="name-scoreboard">{{scoreboard.Name}}</div>
+															<div class="level-scoreboard">{{scoreboard.levelScoreboard}}</div>
+														</div>
+														<div class="diem-Score">
+															<div class="score-scoreboard">{{scoreboard.Score}}</div>
+															<div class="level-score">Điểm</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									<div class = "swiper-slide" >
+									<p class="common_notify" ng-show ="notifyData4">Chưa Có Dữ Liệu!</p>
+										<div class="topic_content" ng-show ="!notifyData4">
+											<div class="list-group_score">
+												<ul class="list-group" >
+													<li class="list-group-item" ng-repeat = "scoreboard in listScoreClass4">
+														<div class="stt-Score">
+															<div class="coup-score">
+															<div class="index-topscore" style ="{{scoreboard.styleCupScore}}"></div>
+															<p class="index-score" style = "{{scoreboard.styleIndexScore}}">{{scoreboard.index}}</p>
+															</div>
+														</div>
+														<div class="nameUser-Score">
+															<div class="name-scoreboard">{{scoreboard.Name}}</div>
+															<div class="level-scoreboard">{{scoreboard.levelScoreboard}}</div>
+														</div>
+														<div class="diem-Score">
+															<div class="score-scoreboard">{{scoreboard.Score}}</div>
+															<div class="level-score">Điểm</div>
+														</div>
+													</li>
+
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									<div class = "swiper-slide" >
+									<p class="common_notify" ng-show ="notifyData5">Chưa Có Dữ Liệu!</p>
+										<div class="topic_content" ng-show ="!notifyData5">
+											<div class="list-group_score">
+												<ul class="list-group" >
+													<li class="list-group-item" ng-repeat = "scoreboard in listScoreClass5">
+														<div class="stt-Score">
+															<div class="coup-score">
+															<div class="index-topscore" style ="{{scoreboard.styleCupScore}}"></div>
+															<p class="index-score" style = "{{scoreboard.styleIndexScore}}">{{scoreboard.index}}</p>
+															</div>
+														</div>
+														<div class="nameUser-Score">
+															<div class="name-scoreboard">{{scoreboard.Name}}</div>
+															<div class="level-scoreboard">{{scoreboard.levelScoreboard}}</div>
+														</div>
+														<div class="diem-Score">
+															<div class="score-scoreboard">{{scoreboard.Score}}</div>
+															<div class="level-score">Điểm</div>
+														</div>
+													</li>
+
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+									
+								</div>
+								<!-- Add Pagination -->
+								<div class="swiper-pagination"></div>
+								<!-- Add Arrows -->
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="right_content"></div>
+			</div>
+			<div class="footer"></div>
+		</div>
+	</div>
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination : '.swiper-pagination',
+			paginationClickable : true,
+			nextButton : '.swiper-button-next',
+			prevButton : '.swiper-button-prev',
+			spaceBetween : 30
+		});
+	</script>
+</body>
+</html>

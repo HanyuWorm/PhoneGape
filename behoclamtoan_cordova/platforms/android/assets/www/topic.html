@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<!-- Apply Module -->
+<html >
+<head>
+	<meta charset="utf-8">
+	<title>Kidteam_Topic</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" href="css/libs/bootstrap.topic.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ 	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/libs/cordova-1.6.1.js"></script>
+	
+	<script type="text/javascript" src="js/topic.js"></script>
+	<link rel="stylesheet" href="css/chude.css">
+	<link rel="stylesheet" href="css/common.css">
+	<script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        // device APIs are available
+        function onDeviceReady() {
+            if(navigator.network.connection.type == Connection.NONE){
+                alert("Không có kết nối internet!");
+            }
+        }
+        
+        function onDeviceReady(){
+    	    document.addEventListener("backbutton", function(e){
+    	    	window.location='./mode.html';
+    	    }, false);
+    	}
+    </script>
+</head>
+<body>
+	<div class="container-topic" ng-app= "topic" ng-controller = "getTopic">
+		<div class="header">
+			<div class="left_header"></div>
+			<div class="right_header">
+				<div class="right_left_header"></div>
+				<div class="right_right_header"></div>
+			</div>
+		</div>
+
+		<div class="content" >
+			<div class="right_content">
+				<div class="right_left_content">
+					<div class="top_table"></div>
+					<div class="content_table">
+						<div class="topic_content">
+						<p class="common_notify" ng-show ="isNotifyData">Chưa Có Dữ Liệu!</p>
+							<div class="list-group" ng-repeat = "topic in listOfTopic" >
+								<a href="#" class="list-group-item" ng-click = "saveName(topic);">{{topic.TopicName|lowercase}}</a> 
+									
+							</div>
+							<!--<div class="list-group">
+								<a href="#" class="list-group-item" ng-click = "saveName(topic);">topic.Name|lowercase
+								topic.Name|lowercasetopic.Name|lowercase topic.Name|lowercase
+								</a> 
+									
+							</div>-->
+						</div>
+						<div class="class_content">
+							<div class="list-group" >
+								<a href="#" class="list-group-item class" ng-click = "selectTopic(lop);" ng-repeat = "lop in listclass">{{lop.Name}}</a> 
+							</div>
+						</div>
+					</div>
+					<div class="button_table"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer"></div>
+	</div>
+</body>
+</html>

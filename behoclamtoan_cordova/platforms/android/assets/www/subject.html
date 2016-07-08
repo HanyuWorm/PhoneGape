@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chủ Đề</title>
+<meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+<script type="text/javascript" charset="utf-8"src="js/libs/cordova-1.6.1.js"></script>
+<link rel="stylesheet" href="css/libs/bootstrap.topic.css">
+
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/subject.css">
+<script type="text/javascript" src="js/subject.js"></script>
+<script type="text/javascript">
+	document.addEventListener("deviceready", onDeviceReady, false);
+	// device APIs are available
+	function onDeviceReady() {
+		if (navigator.network.connection.type == Connection.NONE) {
+			alert("Không có kết nối internet!");
+		}
+	}
+	
+	function onDeviceReady(){
+	    document.addEventListener("backbutton", function(e){
+	    	window.location='./mode_exams.html';
+	    }, false);
+	}
+</script>
+</head>
+<body>
+	<div class="kt-header"></div>
+	<div class="kt-body" ng-app="appsubject" ng-controller = "subjectcontroller">
+		<div class="kt-body-left"></div>
+		<div class="kt-body-center">
+			<div class="wrapper-content-left"></div>
+			<div class="wrapper-content">
+				<div class="week-item">
+				<p class="common_notify" ng-show ="isNotifyData">Chưa Có Dữ Liệu!</p>
+						<div class="list-group">
+							<a href="#" class="list-group-item" ng-click = "saveName(topic);" ng-repeat = "topic in listTopic">{{topic.TopicName|lowercase}}</a>
+						</div>
+				</div>
+			</div>
+			<div class="wrapper-content-right"></div>
+		</div>
+		<div class="kt-body-right"></div>
+	</div>
+	<div class="kt-footer"></div>
+</body>
+</html>

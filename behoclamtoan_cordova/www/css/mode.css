@@ -1,0 +1,121 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../image/bg_selectmode.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.container {
+	width: 100% !important;
+	height: 100%;
+}
+
+.container .one_layout{
+	width: 100% !important;
+	height: 28%;
+}
+
+.container .luyentap_layout{
+	width: 100% !important;
+	height: 8%;
+	
+}
+
+.luyentap_layout .left_luyentap{
+	width: 31% !important;
+	height: 100%;
+	float: left;
+	
+}
+
+.luyentap_layout .right_luyentap{
+	width: 69% !important;
+	height: 100%;
+	float: right;
+	
+}
+
+.right_luyentap .left_textluyentap{
+	width: 36% !important;
+	height: 100%;
+	float: left;
+}
+
+.right_luyentap .right_textluyentap{
+	width: 64% !important;
+	height: 100%;
+	float: right;
+	
+}
+
+.textCommon{
+    font-size: 150%;
+    font-weight: bold;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.textCommon  a {
+	color: #0ec200;
+}
+
+.textCommon  a:visited  {
+	color: #0ec200;
+	text-decoration: none;
+}
+/* mouse over link */
+.textCommon a:hover {
+	text-decoration: none;
+}
+
+/* selected link */
+.textCommon a:active {
+	text-decoration: none;
+} 
+
+.container .two_layout{
+	width: 100% !important;
+	height: 16%;
+	
+}
+
+.container .thi_layout{
+	width: 100% !important;
+	height: 7%;
+}
+
+.thi_layout .left_thi{
+	width: 36% !important;
+	height: 100%;
+	float: left;
+	
+}
+
+.thi_layout .right_thi{
+	width: 64% !important;
+	height: 100%;
+	float: right;
+	
+}
+
+.right_thi .left_textthi{
+	width: 23% !important;
+	height: 100%;
+	float: left;
+}
+
+.right_thi .right_textthi{
+	width: 77% !important;
+	height: 100%;
+	float: right;
+	
+}
+
+
+.container .three_layout{
+	width: 100% !important;
+	height: 38%;
+}
+

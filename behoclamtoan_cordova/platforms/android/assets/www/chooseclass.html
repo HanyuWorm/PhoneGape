@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chọn Lớp</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+<script type="text/javascript" charset="utf-8"src="js/libs/cordova-1.6.1.js"></script>
+
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/chooseclass.css">
+<!-- Link Swiper's CSS -->
+<script type="text/javascript" src="js/chooseclass.js"></script>
+<script type="text/javascript">
+	document.addEventListener("deviceready", onDeviceReady, false);
+	// device APIs are available
+	function onDeviceReady() {
+		if (navigator.network.connection.type == Connection.NONE) {
+			alert("Không có kết nối internet!");
+		}
+	}
+	function onDeviceReady(){
+	    document.addEventListener("backbutton", function(e){
+	    	window.location='./mode.html';
+	    }, false);
+	}
+</script>
+</head>
+<body>
+	<div class="kt-header"></div>
+	<div class="kt-body" ng-app="appChooseClass" ng-controller = "ChooseClassController">
+		<div class="kt-body-left"></div>
+		<div class="kt-body-center">
+			<div class="wrapper-content-left"></div>
+				<div class="wrapper-content">
+				<p class="common_notify" ng-show ="isNotifyData">Chưa Có Dữ Liệu!</p>
+					<div class="week-item" ng-repeat = "class in listclass">
+						<div class="week-index" ng-click="toSubjectPage(class);">{{class.Name}}</div>
+					</div>
+				</div>
+			<div class="wrapper-content-right"></div>
+		</div>
+		<div class="kt-body-right"></div>
+	</div>
+	<div class="kt-footer"></div>
+	<!-- Initialize Swiper -->
+</body>
+</html>

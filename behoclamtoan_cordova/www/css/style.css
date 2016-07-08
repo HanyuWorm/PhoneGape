@@ -1,0 +1,96 @@
+body {
+	-webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+	-webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+	background: url("../img/bgTopic.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: 100% 100%;
+}
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+}
+
+.container {
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+.header {
+	width: 100%;
+}
+
+.content {
+	width: 100%;
+}
+
+.content .leftcontent {
+	float: left;
+	height: 100%;
+	width: 17%;
+}
+
+.content .rightcontent {
+	float: right;
+	height: 100%;
+	width: 80%;
+}
+
+.rightcontent .chuyende {
+	float: left;
+	height: 100%;
+	overflow: auto;
+	width: 57%;
+}
+
+.chuyende ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 0 0;
+	position: relative;
+	width: 100%;
+}
+
+.chuyende ul li a:hover, a:visited {
+	color: #ff5500;
+}
+
+.chuyende ul li a:active {
+	color: #00ff00;
+}
+
+.rightcontent .lop {
+	float: right;
+	height: 100%;
+	overflow: auto;
+	width: 41%;
+}
+
+.lop ul {
+	list-style-type: none;
+	padding: 5px 0 0;
+	position: relative;
+	width: 100%;
+}
+
+.lop ul li {
+	height: 28px;
+	margin-left: -3px;
+}
+
+.lop ul li a:hover, a:visited {
+	color: #00ff00;
+}
+
+.lop ul li a:active {
+	color: #ff0000;
+}
+
+.footer {
+	height: 20px;
+}

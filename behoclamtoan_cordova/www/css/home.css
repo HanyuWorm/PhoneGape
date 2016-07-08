@@ -1,0 +1,81 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../image/bg_home.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.container {
+	width: 100% !important;
+	height: 100%;
+}
+
+.container .left_home{
+	width: 40% !important;
+	height: 100%;
+	float: left;
+}
+
+.left_home .left_item{
+	
+	width: 40% !important;
+	height: 100%;
+	float: left;
+	margin: 0;
+	padding: 0;
+	
+}
+.left_item .left_selectItem1{
+	width: 100% !important;
+	height: 10%;
+	margin-top: 10%;
+	background: url(../image/home_selectItemdiemcao.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.left_item .left_selectItem2{
+	width: 100% !important;
+	height: 10%;
+	background: url(../image/home_selectItem_his.png) no-repeat;
+	background-size: 100% 100%;
+	
+}
+
+
+.container .right_home{
+	width: 60% !important;
+	height: 100%;
+	float: right;
+}
+
+.right_home .left_content_home{
+	width: 20% !important;
+	height: 100%;
+	float: left;
+}
+/* CSS button play */
+.left_content_home .top_button{
+	width: 100% !important;
+	height: 35%;
+} 
+
+.left_content_home .center_button{
+	width: 100% !important;
+	height: 24%;
+	background: url(../image/bg_buttonplay.png) no-repeat;
+	background-size: 100% 100%;
+} 
+
+
+.left_content_home .footer_button{
+	width: 100% !important;
+	height: 40%;
+} 
+
+.right_home .right_content_home{
+	width: 80% !important;
+	height: 100%;
+	float: right;
+}

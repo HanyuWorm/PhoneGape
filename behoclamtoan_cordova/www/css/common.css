@@ -1,0 +1,12 @@
+@font-face {
+	font-family: myFont;
+	src: url('../font/nabila.ttf');
+}
+html, body {
+	font-family: myFont !important;
+	font-size: 90% !important;
+}
+
+/* Reponsive layout */
+@media only screen and (min-width: 640px) and (orientation: landscape) {
+}

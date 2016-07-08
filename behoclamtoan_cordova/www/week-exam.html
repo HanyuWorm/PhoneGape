@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week exam</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/week-exam.css">
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="css/libs/swiper.min.css">
+	<!-- swiper js -->
+	<script src="lib/swiper.min.js"></script>
+	<script src="js/week-exam.js"></script>
+	<script type="text/javascript">
+	document.addEventListener("deviceready", onDeviceReady, false);
+	// device APIs are available
+	function onDeviceReady() {
+		if (navigator.network.connection.type == Connection.NONE) {
+			alert("Không có kết nối internet!");
+		}
+	}
+	function onDeviceReady(){
+	    document.addEventListener("backbutton", function(e){
+	    	window.location='./mode_exams.html';
+	    }, false);
+	}
+</script>
+</head>
+<body  ng-app= "app-week-exam">
+	
+	<div class = "container">
+	<div class = "header"></div>
+	<div class = "content">
+	<div class = "left_content"></div>
+	<div class = "table_content">
+	<!-- button previous -->
+	<div class="wrapper-content-left">
+			<div class="swiper-button-prev">Prev</div>
+			</div>
+	<!-- containner, this is one page,  contain title and detail -->
+	<div class="swiper-container">
+					<div class="swiper-wrapper" ng-controller="controller-week-exam">
+
+						<div class="swiper-slide" ng-repeat="topic in getListTopicWeek">
+							<div class="item_content" ng-repeat="topicWeek in topic.TopicWeek">
+								<div class="title_content">{{topicWeek.Name}}</div>
+								<div class="detail_content">
+									<a href="#" id="topic-name" ng-click="toPlay(topicWeek.Week);">
+										<div class="week-topic" ng-repeat="week in topicWeek.Week">- {{week.TopicName}}.</div>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="wrapper-content"></div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="wrapper-content"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="wrapper-content"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="wrapper-content"></div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="wrapper-content"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="wrapper-content"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="wrapper-content"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="wrapper-content"></div>
+						</div>
+						
+					</div>
+				</div>
+	
+	<!-- button Next -->
+	<div class="wrapper-content-right">
+			<div class="swiper-button-next">Next</div>
+			</div>
+	
+	</div>
+	<div class = "rigth_content"></div>
+	</div>	
+	<div class="footer"></div>
+	</div>
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination : '.swiper-pagination',
+			paginationClickable : true,
+			nextButton : '.swiper-button-next',
+			prevButton : '.swiper-button-prev',
+			spaceBetween : 30
+		});
+	</script>
+	
+</body>
+</html>

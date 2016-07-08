@@ -1,0 +1,24 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "net.kidteam.behoclamtoan"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "net.kidteam.behoclamtoan"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "net.kidteam.behoclamtoan"
+        },
+        "cordova-plugin-ondestroy": {
+            "PACKAGE_NAME": "net.kidteam.behoclamtoan"
+        }
+    },
+    "dependent_plugins": {}
+}

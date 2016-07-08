@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<!-- Apply Module -->
+<html >
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/mode.css">
+	<link rel="stylesheet" href="css/common.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	
+	<link rel="stylesheet" href="css/libs/bootstrap.min.css">
+  	<script src="js/libs/jquery.min.js"></script>
+ 	 <script src="js/libs/bootstrap.min.js"></script>
+ 	 <script type="text/javascript" src="js/mode.js"></script>
+	<script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        // device APIs are available
+        function onDeviceReady() {
+		
+            if(navigator.network.connection.type == Connection.NONE){
+                alert("Không có kết nối internet!");
+            }
+        }
+        
+        function onDeviceReady(){
+    	    document.addEventListener("backbutton", function(e){			
+    	    	window.location='./home.html';
+    	    }, false);
+    	}
+    </script>
+	
+</head>
+<body>
+	<div class="container" ng-app= "appMode" ng-controller = "ModeController">
+		<div class="one_layout"></div>
+		<div class="luyentap_layout">
+		<div class="left_luyentap"></div>
+		<div class="right_luyentap">
+		<div class="left_textluyentap">
+		<p class="textCommon"><a href="#" ng-click="nextPage('Luyentap');">Luyện Tập</a></p>
+		</div>
+		<div class="right_textluyentap"></div>
+		</div>
+		
+		</div>
+		<div class="two_layout"></div>
+		<div class="thi_layout">
+		<div class="left_thi"></div>
+		<div class="right_thi">
+		<div class="left_textthi">
+		<p class="textCommon"><a href="#" ng-click="nextPage('Thi');">Thi</a></p>
+		</div>
+		<div class="right_textthi"></div>
+		</div>
+		</div>
+		<div class="three_layout"></div>
+		
+	</div>
+</body>
+</html>

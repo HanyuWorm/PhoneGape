@@ -1,0 +1,136 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+}
+@media only screen and (min-width: 321px) {
+	.header {
+		height: 60px;
+	}
+	.content {
+		height: 230px;
+		margin-top: 8px;
+	}
+	.lop ul {
+		padding: 30px 0 0 10px;
+	}
+	.chuyende ul li {
+		height: 20px;
+		margin-left: -3px;
+	}
+	.chuyende ul li a {
+		color: #0000ff;
+		display: block;
+		float: left;
+		font-size: 9pt;
+		line-height: 25px;
+		margin-bottom: -10px;
+		overflow: hidden;
+		padding: 5px 17px;
+		text-decoration: none;
+	}
+	.lop ul li a {
+		color: #ffffff;
+		display: block;
+		float: left;
+		font-size: 15pt;
+		font-weight: bold;
+		line-height: 30px;
+		margin-bottom: -15px;
+		overflow: hidden;
+		padding: 6px 30px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+@media only screen and (max-width: 241px) {
+}
+@media only screen and (min-width: 680px) and (max-width: 690px) {
+}
+@media only screen and (min-width: 1000px) and (max-width: 1030px) {
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+	.header {
+		height: 133px;
+	}
+	.content {
+		height: 490px;
+		margin-top: 8px;
+	}
+	.lop ul {
+		padding: 30px 0 0 70px;
+	}
+	.chuyende ul li {
+		height: 28px;
+		margin-left: -3px;
+	}
+	.chuyende ul li a {
+		color: #0000ff;
+		display: block;
+		float: left;
+		font-size: 12pt;
+		line-height: 32px;
+		margin-bottom: -15px;
+		overflow: hidden;
+		padding: 6px 17px;
+		text-decoration: none;
+	}
+	.lop ul li a {
+		color: #ffffff;
+		display: block;
+		float: left;
+		font-size: 20pt;
+		font-weight: bold;
+		line-height: 40px;
+		margin-bottom: -15px;
+		overflow: hidden;
+		padding: 6px 50px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+@media only screen and (min-width: 1224px) {
+	.header {
+		height: 130px;
+	}
+	.content {
+		height: 554px;
+		margin-top: 8px;
+	}
+	.lop ul {
+		padding: 30px 0 0 70px;
+	}
+	.chuyende ul li {
+		height: 32px;
+		margin-left: -3px;
+	}
+	.chuyende ul li a {
+		color: #0000ff;
+		display: block;
+		float: left;
+		font-size: 12pt;
+		line-height: 36px;
+		margin-bottom: -15px;
+		overflow: hidden;
+		padding: 6px 17px;
+		text-decoration: none;
+	}
+	.lop ul li a {
+		color: #ffffff;
+		display: block;
+		float: left;
+		font-size: 21pt;
+		font-weight: bold;
+		line-height: 38px;
+		margin-bottom: -15px;
+		overflow: hidden;
+		padding: 0 63px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}

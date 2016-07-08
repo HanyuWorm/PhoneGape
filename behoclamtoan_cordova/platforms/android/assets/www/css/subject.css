@@ -1,0 +1,154 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../image/chude4.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.kt-header {
+	width: 100%;
+	height: 25%;
+	text-align: center;
+}
+
+.kt-body {
+	width: 100%;
+	height: 46%;
+}
+
+.kt-footer {
+	width: 100%;
+	height: 10%;
+	text-align: center;
+}
+
+.kt-body-left, .kt-body-right {
+	height: 100%;
+	width: 15%;
+	float: left;
+}
+
+.kt-body-center {
+	height: 100%;
+	width: 70%;
+	float: left;
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.wrapper-content-left, .wrapper-content-right {
+	height: 100%;
+	width: 5%;
+	float: left;
+}
+
+.wrapper-content {
+	height: 100%;
+	width: 80%;
+	float: left;
+}
+
+.week-item {
+	width: 100%;
+	height: 22%;
+	/* float: left; */
+	/* margin-right: 3%; */
+}
+
+.week-index {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	color: #FFFC00;
+	background-color: #6DCFF6;
+	border: 3px dotted #8781BD;
+	line-height: 200%;
+	border-radius: 10px
+}
+
+.week-content {
+	width: 100%;
+	height: 30%;
+	/* margin-top: 5%; */
+	color: #FFF;
+	padding: 10px 0;
+	text-align: left;
+	border: 3px solid #D7E6E2;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	background-color: #7ACCC8;
+	border-radius: 10px;
+	word-break: break-word;
+	/* overflow-x: hidden;
+	overflow-y: auto; */
+}
+.wrapper-week-content {
+	width: 100%;
+	height: 100%;
+	overflow-x:hidden;
+	overflow-y: auto;
+}
+.week-topic {
+	font-size: 90%;
+}
+.scroll-content {
+	width: 100%;
+	height: 100%;
+}
+
+#topic-name{
+	color: #ffffff;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: #0000FF;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+}
+/* test */
+.topic_content {
+	width: 68% !important;
+	height: 100% ;
+	float: left;
+	margin-left: 3%;
+	overflow: auto;
+}
+.wrapper-content {
+	width: 90%;
+    height: 100%;
+    float: left;
+    margin-top: 3%;
+    overflow: auto;
+}
+
+.list-group-item {
+	background-color: #04da91;
+    border-radius: 7px;
+    font-size: 100%;
+    margin-bottom: 5px;
+    margin-left: 7%;
+    margin-right: 6%;
+    text-align: left;
+    color: #FFFFFF;
+    line-height: 140%;
+	word-wrap: break-word;
+}
+
+.list-group-item .span:overflowing {
+  background-color: #00FF00;
+}
+
+.common_notify {
+	text-align: center;
+	color: #ff0000;
+    font-weight: bold;
+}

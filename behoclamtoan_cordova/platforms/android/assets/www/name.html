@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<!-- Apply Module -->
+<html >
+<head>
+	<meta charset="utf-8">
+	<title>Kidteam_Name</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/name.css">
+	<link rel="stylesheet" href="css/common.css">
+	
+	<link rel="stylesheet" href="css/libs/bootstrap.min.css">
+  	<script src="js/libs/jquery.min.js"></script>
+ 	<script src="js/libs/bootstrap.min.js"></script>
+ 	
+ 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/libs/cordova-1.6.1.js"></script>
+	<script type="text/javascript" src="js/name.js"></script>
+
+	<style>
+	.input_name {
+		-webkit-transition: all linear 0.5s;
+		transition: all linear 0.5s;
+		background: transparent;
+	}
+	
+	.input_name.ng-invalid {
+		color: white;
+		background: red;
+	}
+	</style>
+	
+	<script type="text/javascript">
+		function onDeviceReady() {
+			document.addEventListener("backbutton", function(e) {
+				alert("Mời bạn nhập tên!");
+			}, false);
+			$(".input_name").blur(); //for ios
+			var softkeyboard = window.cordova.plugins.SoftKeyBoard;
+			softkeyboard.hide();
+		}
+		document.addEventListener("deviceready", onDeviceReady, false);
+		
+	</script>
+</head>
+<body>
+	<div class="container" ng-app= "saveInfo" ng-controller = "myGetUserName">
+		<div class="left_content"></div>
+		<div class="name_content">
+			<div class="left_name">
+				<div class="head_center_content">
+					<div class="top_page">
+						<p class="title_name">Nhập Tên</p>
+						<input type="text" name="name"  class="form-control input_name " id="usr" ng-model="userName" ng-maxlength="100">
+					</div>
+					<div class="detail_page">
+						<div class="left_detail">
+							<p class="detail_common">Điểm: </p>
+							<p class="detail_common">Thời Gian: </p>
+						</div>
+						<div class="right_detail">
+							<p class="score_common" style ="color:#0000FF">{{score}}</p>
+							<p class="score_common" style ="color:#0000FF">{{timePlay}} (s)</p>
+						</div>
+					</div>
+					<div class="button_ok">
+						<p class="btn btn-default" data-ng-click="nextPage(userName);">Ok</p>
+					</div>
+
+				</div>
+				
+			</div>
+			<div class="right_name"></div>
+		</div>
+	</div>
+</body>
+</html>

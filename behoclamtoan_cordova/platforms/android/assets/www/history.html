@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<!-- Apply Module -->
+<html >
+<head>
+	<meta charset="utf-8">
+	<title>Kidteam_History</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/history.css">
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ 	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/libs/cordova-1.6.1.js"></script>
+	<script type="text/javascript" src="js/history.js"></script>
+	
+	
+	<script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        // device APIs are available
+        function onDeviceReady() {
+            if(navigator.network.connection.type == Connection.NONE){
+                alert("Không có kết nối internet!");
+            }
+        }
+        
+        function onDeviceReady(){
+    	    document.addEventListener("backbutton", function(e){
+    	    	window.location='./home.html';
+    	    }, false);
+    	}
+    </script>
+    <script>
+	$(document).ready(function(){
+	    $("#row1").click(function(){
+	        $("#time1").slideToggle("slow");
+	    });
+		$('#row2').click(function(){
+			$("#time2").slideToggle("slow");
+		});
+	});
+</script>
+</head>
+<body>
+	<div class='container' ng-app="history" ng-controller="getHistory">
+		<div class='left-side'></div>
+		<div class='wrapper-center'>
+			<div class='top-side'>
+				<div class='top-label'></div>
+			</div>
+			<div id="menu">
+				<div class="panel list-group">
+					<p class="common_notify" ng-show ="notifyData">Chưa Có Dữ Liệu!</p>
+					<div class="details" ng-repeat="history in listHistory" style="{{styleDetails(history)}}">
+						<a href="#" class="list-group-item header" data-parent="#menu" ng-click = "expand(history);" style="{{styleTopHeader(history)}}">
+
+							<div class="item_history">
+								<div class="item_left">
+									<p class="item_commonleft">{{history.DateTime}}</p>
+									<p class="item_commonleft">{{history.Name}}</p>
+								</div>
+								<div class="item_right">
+									<p class="item_Score">Điểm: {{history.Score}}</p>
+								</div>
+							</div>
+						</a>
+						<div id="sl" ng-show="history.status" style="{{styleDetailHeader(history)}}">
+							<div id="details_top">
+								<p class="common_textdetail" style ="display:inline-block;white-space: nowrap;overflow:hidden !important; text-overflow: ellipsis;">Chủ đề: {{history.Topic}}</p>
+								<p class="common_textdetail">{{history.ClassName}}</p>
+								<p class="common_textdetail">Thời Gian Chơi
+									:{{history.TimePlay}} (s)</p>
+							</div>
+							<div class="detail_totalAnswer" style="padding-top: 1%">
+								<div class="totalAnswer_leftt" style="float: left;">
+									<p class="common_textdetail">Câu Đúng:
+										{{history.TotalAnswerTrue}} (Câu)</p>
+									<p class="common_textdetail">Câu Sai:
+										{{history.TotalQuestion - history.TotalAnswerTrue}} (Câu)</p>
+								</div>
+								<div class="totalAnswer_right">
+									<p class="common_textdetail"
+										style="color: red; padding-top: 1%; text-align: center;">Tổng: {{history.TotalQuestion}} (Câu)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class='bottom-side'></div>
+		</div>
+		<div class='right-side'></div>
+	</div>
+</body>
+</html>

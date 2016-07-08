@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<!-- Apply Module -->
+<html >
+<head>
+	<meta charset="utf-8">
+	<title>Kidteam_HomePage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/common.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+
+	
+ 	 <script type="text/javascript" src="js/home.js"></script>
+	 <script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript">
+	
+	
+	function onDeviceReady(){
+	    document.addEventListener("backbutton", function(e){
+	    	 navigator.app.exitApp();
+
+	    }, false);
+	}
+	document.addEventListener("deviceready", onDeviceReady, false);
+	function onDeviceReady() {
+	//alert("deviceModel " + device.model + "_" + device.uuid);
+    window.sessionStorage.setItem("DeviceId", device.model + "_" + device.uuid);
+	}	
+	</script>
+	
+</head>
+<body>
+	<div class="container" ng-app= "appHome" ng-controller = "homeController">
+		<div class="left_home">
+		<div class="left_item">
+		<div class="left_selectItem1" ng-click="nextPage('scoreBoard');"></div>
+		<div class="left_selectItem2" ng-click="nextPage('lichSu');"></div>
+		</div>
+		
+		</div>
+		<div class="right_home">
+		<div class="left_content_home">
+		<div class="top_button" ></div>
+		<div class="center_button" ng-click="nextPage('modePage');"></div>
+		<div class="footer_button"></div>
+		</div>
+		<div class="right_content_home"></div>
+		</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mode exam</title>
+<meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/modev2.css">
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="css/libs/swiper.min.css">
+ <script type="text/javascript" src="js/mode_exams.js"></script>
+<!-- Swiper JS -->
+<script src="lib/swiper.min.js"></script>
+<script type="text/javascript">
+	document.addEventListener("deviceready", onDeviceReady, false);
+	// device APIs are available
+	function onDeviceReady() {
+		if (navigator.network.connection.type == Connection.NONE) {
+			alert("Không có kết nối internet!");
+		}
+	}
+	function onDeviceReady() {
+		document.addEventListener("backbutton", function(e) {
+		
+			window.location='./chooseclass.html';
+		}, false);
+	}
+</script>
+</head>
+<body ng-app= "appModeExams" ng-controller = "ModeControllerExams">
+	<div class="kt-header"></div>
+	<div class="kt-body">
+		<div class="kt-body-left"></div>
+		<div class="kt-body-center">
+			<div class="wrapper-content-left"></div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+
+					<div class="swiper-slide">
+						<div class="wrapper-content">
+							<div class="week-item">
+								<div class="week-index" ng-click="nextPage('ThiTuan');"></div>
+								
+							</div>
+							<div class="week-item">
+								<div class="week-index1" ng-click="nextPage('ThiHocKy');"></div>
+								
+							</div>
+							<div class="week-item">
+								<div class="week-index2" ng-click="nextPage('ThiTheoChuDe');"></div>
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+			
+			<div class="wrapper-content-right"></div>
+		</div>
+		<div class="kt-body-right"></div>
+	</div>
+	<div class="kt-footer"></div>
+	
+</body>
+</html>
